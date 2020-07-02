@@ -14,19 +14,18 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.*;
 
 public class EmployeeServiceTest {
+    @Captor
+    public ArgumentCaptor<Employee> employeeArgumentCaptor;
+
     @InjectMocks
     private EmployeeService target;
 
     @Mock
     private EmployeeRepository employeeRepository;
 
-    @Captor
-    public ArgumentCaptor<Employee> employeeArgumentCaptor;
-
     @BeforeEach
     public void setup() {
         MockitoAnnotations.initMocks(this);
-
     }
 
     @Test
