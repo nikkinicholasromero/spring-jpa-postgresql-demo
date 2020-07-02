@@ -32,9 +32,9 @@ public class EmployeeService {
         employeeRepository.save(employee);
     }
 
-    public void delete(String id) {
+    public void delete(int id) {
         Employee employee = new Employee();
-        employee.setId(Integer.parseInt(id));
+        employee.setId(id);
 
         employeeRepository.delete(employee);
     }
